@@ -16,13 +16,13 @@ namespace MvcMovie.Controllers
         {
             return "This is William's default action...";
         }
-        
+
         // GET: /HelloWorld/Welcome/
-        public string Welcome(string name, int numTimes = 1)
+        public string Welcome(string name, int ID = 1)
         {
-      //return "This is the Welcome action method...";
-      return HtmlEncoder.Default.HtmlEncode(
-        "Hello" + name + ", NumTimes is: " + numTimes);
+            //return "This is the Welcome action method...";
+            return HtmlEncoder.Default.HtmlEncode(
+              "Hello " + name + ", ID: " + ID);
         }
 
     }
