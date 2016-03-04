@@ -12,7 +12,7 @@ namespace MvcMovie.Controllers
 
         public MoviesController(ApplicationDbContext context)
         {
-            _context = context;    
+            _context = context;
         }
 
         // GET: Movies
@@ -77,7 +77,8 @@ namespace MvcMovie.Controllers
         // POST: Movies/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Edit(Movie movie)
+        public IActionResult Edit(
+            [Bind("ID, Title, ReleaseDate, Genre, Price")] Movie movie)
         {
             if (ModelState.IsValid)
             {
