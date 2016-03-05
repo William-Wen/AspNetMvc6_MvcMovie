@@ -118,7 +118,7 @@ namespace MvcMovie.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(
-            [Bind("ID, Title, ReleaseDate, Genre, Price")] Movie movie)
+            [Bind("ID, Title, ReleaseDate, Genre, Price, Rating")] Movie movie)
         {
             if (ModelState.IsValid)
             {
